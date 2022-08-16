@@ -1,0 +1,5 @@
+Floor: 4, Price: 850.0, Area: 80.0, Number of rooms: 3, Is renovated: yes, Is sold: yes
+Floor: 3, Price: 900.0, Area: 75.0, Number of rooms: 3, Is renovated: yes, Is sold: yes
+Floor: 2, Price: 1000.0, Area: 49.0, Number of rooms: 1, Is renovated: yes, Is sold: no
+Floor: 11, Price: 1400.0, Area: 180.0, Number of rooms: 6, Is renovated: yes, Is sold: no
+Floor: 11, Price: 1600.0, Area: 100.0, Number of rooms: 2, Is renovated: yes, Is sold: no

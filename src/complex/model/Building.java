@@ -2,7 +2,8 @@ package complex.model;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Building {
+public abstract class Building {
+
     static Scanner s = new Scanner(System.in);
 
     private String address;
@@ -45,9 +46,9 @@ public class Building {
         }
     }
 
-    public void printInfo() {
-        System.out.println("Address: " + address + '\n' + "Count of floors = " + countOfFloors + '\n' +
-                "Count of apartments per floor = " + countOfApartmentsPerFloor + '\n' + "Is monolithic = "
-                + (isMonolithic ? "yes" : "no") + '\n');
+    public void printBuildingInfo() {
+        System.out.println("Address: " + address + ", " + "Count of floors = " + countOfFloors + ", " +
+                "Count of apartments per floor = " + countOfApartmentsPerFloor + ", " + "Is monolithic = "
+                + (isMonolithic ? "yes" : "no") + ", ");
     }
 }

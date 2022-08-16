@@ -1,64 +1,52 @@
 package complex.model;
 
-public class Apartment {
+import java.util.List;
 
-    private int floor;
-    private double price;
-    private double area;
-    private int numberOfRooms;
+public class Apartment implements Comparable<Apartment> {
+
+    private final int floor;
+    private final double price;
+    private final double area;
+    private final int numberOfRooms;
     private boolean isRenovated;
+    private boolean isSold;
 
-
-    public Apartment(int floor, double price, double area, int numberOfRooms, boolean isRenovated) {
+    public Apartment(int floor, double price, double area, int numberOfRooms) {
         this.floor = floor;
         this.price = price;
         this.area = area;
         this.numberOfRooms = numberOfRooms;
-        this.isRenovated = isRenovated;
-    }
-
-    public int getFloor() {
-        return floor;
-    }
-
-    public void setFloor(int floor) {
-        this.floor = floor;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 
     public int getNumberOfRooms() {
         return numberOfRooms;
     }
 
-    public void setNumberOfRooms(int numberOfRooms) {
-        this.numberOfRooms = numberOfRooms;
+    public void setRenovated(String renovated) {
+        String s1 = renovated.toLowerCase();
+        this.isRenovated = s1.equals("yes");
     }
 
-    public boolean isRenovated() {
-        return isRenovated;
+    public void setSold(String sold) {
+        String s1 = sold.toLowerCase();
+        this.isSold = s1.equals("yes");
     }
 
-    public void setRenovated(boolean renovated) {
-        isRenovated = renovated;
+    public boolean isSold() {
+        return isSold;
     }
 
-    public void printInfo() {
-        System.out.println("Floor: " + floor + '\n' + "Price = " + price + '\n' + "Area = " + area +
-                '\n' + "Number of rooms = " + numberOfRooms + '\n' + "Is renovated" + isRenovated);
+    @Override
+    public String toString() {
+        return "Floor: " + floor + ", " + "Price: " + price + ", " +
+                "Area: " + area + ", " + "Number of rooms: " + numberOfRooms +
+                ", " + "Is renovated: " + (isRenovated ? "yes" : "no") + ", " +
+                "Is sold: " + (isSold ? "yes" : "no") + "\n";
+    }
+
+    @Override
+    public int compareTo(Apartment o) {
+        return this.numberOfRooms - o.numberOfRooms;
     }
 }
+

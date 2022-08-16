@@ -1,10 +1,10 @@
 package complex.service;
+public interface ApartmentService {
 
-public interface Apartment {
-
-    void createNewBuilding();
+    void createNewApartment();
+    void printInfoOfApartments();
     void printCountOfApartments();
-    void countOfApartmentsForSale();
+    int countOfApartmentsForSale();
     void sortingOfApartmentsForSaleByNumberOfRooms();
     void sortingOfSoldHousingByPrice();
 }

@@ -1,11 +1,10 @@
 package complex;
-import complex.service.ApartmentImpl;
+import complex.service.ApartmentServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
 
-        ApartmentImpl apartment = new ApartmentImpl();
+        ApartmentServiceImpl apartment = new ApartmentServiceImpl();
         apartment.startMenu();
-
     }
 }
